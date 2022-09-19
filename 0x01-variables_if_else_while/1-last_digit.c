@@ -13,7 +13,7 @@ int main(void)
 {
 	int n;
 
-	srand(time90));
+	srand(timegm));
 	n = rand() - RAND_MAX / 2;
 	if (n % 10 != 0 && n % 10 < 6)
 	{
