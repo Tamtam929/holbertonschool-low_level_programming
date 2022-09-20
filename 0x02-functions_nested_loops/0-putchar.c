@@ -1,3 +1,4 @@
+gcc 0 - putchar.c main.h
 #include "holberton.h"
 #include "main.h"
 /**
