@@ -1,15 +1,11 @@
-#include "holberton.h"
-
+#include <stdio.h>
 /**
- * main -entry point
+ * main - Prints Putchar as a message.
  *
- * Return: 0
+ * Return: Always 0(Success)
  */
 int main(void)
 {
-	char *holberton;
-
-	for (holberton = "Holberton\n"; *holberton = '\0; ++holberton)
-		_putchar(*holberton);
+	printf("_putchar\n");
 	return (0);
 }
