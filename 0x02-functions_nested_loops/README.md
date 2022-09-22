@@ -1,1 +1,1 @@
-Functions, nested loops for C
+learning loops in C
