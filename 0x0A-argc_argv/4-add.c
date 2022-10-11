@@ -1,53 +1,35 @@
-#includeii <stdio.h>
+#include <stdio.h>
 #include <stdlib.h>
 #include "main.h"
-/**
- * check_digit - checks if a given char is number or not
- * @a: input char
- * Return: int
- **/
-int check_digit(char *a)
-{
-	int i, num, len;
-
-	i = 0;
-	num = 0;
-	len = strlen(a);
-	while (i < len)
-	{
-		if (a[i] < '0' || a[i] > '9')
-		{
-			return (-1);
-		}
-		else
-			num = num * 10 + (a[i] - '0');
-		i++;
-	}
-	return (num);
-}
 
 /**
- * main -  program that adds positive numbers
- * @argc: arguement count
- * @argv: argument vector
- * Return: int
- **/
-
+ * main - Prints the addition of positive numbers,
+ * followed by a new line.
+ * @argc: The number of arguments passed to the program.
+ * @argv: An array of pointers to the arguments.
+ *
+ * Return: If one of the numbers contains symbols that are non-digits - 1.
+ * Otherwise - 0.
+ */
 int main(int argc, char *argv[])
 {
-	int i, num, res;
+	int num, digit, sum = 0;
 
-	res = 0;
-	for (i = 1; i < argc; i++)
+	for (num = 1; num < argc; num++)
 	{
-		num = check_digit(argv[i]);
-		if (num == -1)
+		for (digit = 0; argv[num][digit]; digit++)
 		{
-			printf("Error\n");
-			return (1);
+			if (argv[num][digit] < '0' || argv[num][digit] > '9')
+			{
+				printf("Error\n");
+				return (1);
+			}
 		}
-		res += num;
+
+		sum += atoi(argv[num]);
 	}
-	printf("%d\n", res);
+
+	printf("%d\n", sum);
+
 	return (0);
 }
