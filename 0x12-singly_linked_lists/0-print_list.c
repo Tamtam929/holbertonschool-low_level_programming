@@ -1,6 +1,3 @@
-#include <stdlib.h>
-#include <string.h>
-#include <stdio.h>
 #include "lists.h"
 
 /**
@@ -11,20 +8,15 @@
  */
 size_t print_listint(const listint_t *h)
 {
-	unsigned int count = 0;
+	int i;
 
-	while (h != NULL)
+	for (i = 0; h ; i++)
 	{
-		if (h->str == NULL)
-		{
-			printf("[%d] (%s)\n", 0, "nil");
-		}
+		if (h->str == '\0')
+			printf("[0] (nil)\n");
 		else
-		{
-			printf("[%d] %s\n", h->len, h->str);
-		}
+			printf("[%i] %s\n", h->len, h->str);
 		h = h->next;
-		count++;
 	}
-	return (count);
+	return (i);
 }
