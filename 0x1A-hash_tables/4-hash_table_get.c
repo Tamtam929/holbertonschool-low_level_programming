@@ -34,7 +34,7 @@ value = hash_table_get(ht, "Asterix");
 printf("%s:%s\n", "Asterix", value);
 value = hash_table_get(ht, "Betty");
 printf("%s:%s\n", "Betty", value);
-value = hash_table_get(ht, "98");y
+value = hash_table_get(ht, "98");
 printf("%s:%s\n", "98", value);
 value = hash_table_get(ht, "c");
 printf("%s:%s\n", "c", value);
