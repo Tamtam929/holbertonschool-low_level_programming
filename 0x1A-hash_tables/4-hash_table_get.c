@@ -41,5 +41,4 @@ printf("%s:%s\n", "c", value);
 value = hash_table_get(ht, "javascript");
 printf("%s:%s\n", "javascript", value);
 return (EXIT_SUCCESS);
-
 }
